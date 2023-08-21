@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    float XInput, YInput;
+
+
     [Header("Movement")]
     [Range(100, 1000)]
     [SerializeField]float Speed;
     Rigidbody2D RB;
+    float XInput, YInput;
+
     [Header("Jump")]
     [Range(1, 10)]
     public float JumpVelocity;
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
+
+    [Header("Player Bools")]
+    [SerializeField]
+    private bool isAnimationPlaying = false;
     bool isJumping, isGrounded, CanDJump, isDJumping;
 
-    [Header("Anger Meter")]
+    [Header("References")]
     [SerializeField]
     private AngerMeter angerMeter;
 
@@ -49,7 +56,14 @@ public class PlayerController : MonoBehaviour
             Speed = angerMeter.angerSpeedPercentage;
         }
     }
-    
+
+
+
+    public void SetAnimationPlaying(bool isPlaying)
+    {
+        isAnimationPlaying = isPlaying;
+    }
+
     private void FixedUpdate()
     {
         XInput = Input.GetAxis("Horizontal") * Speed * Time.deltaTime;
