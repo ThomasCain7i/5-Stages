@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
     float XInput, YInput;
     [Header("Movement")]
     [Range(100, 1000)]
@@ -16,10 +15,14 @@ public class PlayerController : MonoBehaviour
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
     bool isJumping, isGrounded, CanDJump, isDJumping;
+
+    [Header("Anger Meter")]
+    [SerializeField]
+    private AngerMeter angerMeter;
+
     // Start is called before the first frame update
      private void OnCollisionEnter2D(Collision2D collision)
     {
-
         if (collision.gameObject.tag == "Ground")
         {
             //anim.SetBool("isGrounded", true);
@@ -27,18 +30,24 @@ public class PlayerController : MonoBehaviour
             CanDJump = true;
            // anim.ResetTrigger("isDJumping");
         }
-
     }
+
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
-        Speed = 200; 
+
+        angerMeter = FindObjectOfType<AngerMeter>();
     }
 
     // Update is called once per frame
     void Update()
-    {       
+    {
         Movement();
+
+        if (angerMeter != null)
+        {
+            Speed = angerMeter.angerSpeedPercentage;
+        }
     }
     
     private void FixedUpdate()
