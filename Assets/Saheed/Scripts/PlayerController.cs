@@ -49,7 +49,18 @@ public class PlayerController : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
 
-        angerMeter = FindObjectOfType<AngerMeter>();
+        if (lightPlayer)
+        {
+            fallMultiplier = .5f;
+            Speed = 300;
+        }
+
+        if (heavyPlayer)
+        {
+            JumpVelocity = 2f;
+            fallMultiplier = 5f;
+            Speed = 100f;
+        }
     }
 
     // Update is called once per frame

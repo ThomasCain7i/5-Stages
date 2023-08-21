@@ -595,6 +595,22 @@ PrefabInstance:
       value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4981658553500658912, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 1203370901}
+    - target: {fileID: 4981658553500658912, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
+      propertyPath: angerMeter
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4981658553500658912, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
+      propertyPath: heavyPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4981658553500658912, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
+      propertyPath: lightPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4981658553500658912, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
       propertyPath: JumpVelocity
       value: 7
       objectReference: {fileID: 0}
