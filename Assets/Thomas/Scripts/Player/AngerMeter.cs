@@ -21,12 +21,12 @@ public class AngerMeter : MonoBehaviour
         isIncreasing = false;
 
         if (isIncreasing)
-        angerSpeedPercentage += Time.deltaTime * 5;
+        angerSpeedPercentage += Time.deltaTime * 10;
 
         if (angerSpeedPercentage <= angerSpeedMin)
         isDecreasing = false;
 
         if (isDecreasing)
-        angerSpeedPercentage -= Time.deltaTime * 5;
+        angerSpeedPercentage -= Time.deltaTime * 10;
     }
 }
