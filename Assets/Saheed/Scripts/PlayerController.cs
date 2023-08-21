@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    float XInput, YInput, Speed;
+    
+    float XInput, YInput;
+    [Header("Movement")]
+    [Range(100, 1000)]
+    [SerializeField]float Speed;
     Rigidbody2D RB;
     [Header("Jump")]
     [Range(1, 10)]
