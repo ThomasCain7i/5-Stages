@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
+    [Header("Type Of Player")]
+    [SerializeField]
+    private bool heavyPlayer;
+    [SerializeField]
+    private bool lightPlayer;
 
     [Header("Movement")]
     [Range(100, 1000)]
@@ -26,6 +30,8 @@ public class PlayerController : MonoBehaviour
     [Header("References")]
     [SerializeField]
     private AngerMeter angerMeter;
+    [SerializeField]
+    private PauseMenu pauseMenu;
 
     // Start is called before the first frame update
      private void OnCollisionEnter2D(Collision2D collision)
@@ -54,6 +60,15 @@ public class PlayerController : MonoBehaviour
         if (angerMeter != null)
         {
             Speed = angerMeter.angerSpeedPercentage;
+        }
+
+        if (isAnimationPlaying == true || pauseMenu.isPaused)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
         }
     }
 

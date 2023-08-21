@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: StartScene
+    m_ConditionEvent: StartAnimation
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7206112725651437549}
@@ -59,7 +59,7 @@ AnimatorController:
   m_Name: SceneAnimation
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: StartScene
+  - m_Name: StartAnimation
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
