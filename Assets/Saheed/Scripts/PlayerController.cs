@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
      private void OnCollisionEnter2D(Collision2D collision)
     {
-
         if (collision.gameObject.tag == "Ground")
         {
             //anim.SetBool("isGrounded", true);
@@ -23,7 +22,6 @@ public class PlayerController : MonoBehaviour
             CanDJump = true;
            // anim.ResetTrigger("isDJumping");
         }
-
     }
     void Start()
     {
