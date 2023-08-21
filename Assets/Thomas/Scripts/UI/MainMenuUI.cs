@@ -7,9 +7,16 @@ public class MainMenuUI : MonoBehaviour
 {
     public GameObject mainMenu, creditsMenu;
 
+    public LevelLoader levelLoader;
+
+    public void Start()
+    {
+        levelLoader = FindObjectOfType<LevelLoader>();
+    }
+
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        levelLoader.LoadLevel(1);
     }
 
     public void OpenCredits()
