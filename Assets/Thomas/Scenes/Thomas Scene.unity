@@ -207,7 +207,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1203370901}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: NotSure
         m_Mode: 1
@@ -1129,7 +1129,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1203370901}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
@@ -1263,7 +1263,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1203370901}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: AreYouSure
         m_Mode: 1
@@ -1882,7 +1882,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1203370901}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: LoadMenu
         m_Mode: 1
@@ -2465,7 +2465,11 @@ PrefabInstance:
     - target: {fileID: 3803998810167911934, guid: c787634e54fb0d14cb9c9b5edaab647c, type: 3}
       propertyPath: pauseMenu
       value: 
-      objectReference: {fileID: 1203370901}
+      objectReference: {fileID: 1919547746}
+    - target: {fileID: 3803998810167911934, guid: c787634e54fb0d14cb9c9b5edaab647c, type: 3}
+      propertyPath: refToCanvas
+      value: 
+      objectReference: {fileID: 1203370896}
     - target: {fileID: 3803998810167911935, guid: c787634e54fb0d14cb9c9b5edaab647c, type: 3}
       propertyPath: m_RootOrder
       value: 2

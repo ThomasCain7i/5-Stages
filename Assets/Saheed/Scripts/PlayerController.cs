@@ -31,8 +31,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private AngerMeter angerMeter;
     [SerializeField]
-    private PauseMenu pauseMenu;
+    private GameObject refToCanvas;
+    [SerializeField]PauseMenu refToPauseMenuScript;
    
+    
+    
 
     // Start is called before the first frame update
      private void OnCollisionEnter2D(Collision2D collision)
@@ -49,7 +52,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
-        pauseMenu = GameObject.Find("Pause Menu").GetComponent<PauseMenu>();
+        refToPauseMenuScript = refToCanvas.GetComponent<PauseMenu>();
         if (lightPlayer)
         {
             fallMultiplier = .5f;
@@ -74,7 +77,7 @@ public class PlayerController : MonoBehaviour
             Speed = angerMeter.angerSpeedPercentage;
         }
 
-        if (isAnimationPlaying == true || pauseMenu.isPaused)
+        if (isAnimationPlaying == true || refToPauseMenuScript.isPaused)
         {
             Time.timeScale = 0f;
         }
