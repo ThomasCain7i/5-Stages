@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private AngerMeter angerMeter;
     [SerializeField]
-    private GameObject refToCanvas;
+    private GameObject PauseMenu;
     [SerializeField]PauseMenu refToPauseMenuScript;
    
     
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
-        refToPauseMenuScript = refToCanvas.GetComponent<PauseMenu>();
+        refToPauseMenuScript = PauseMenu.GetComponentInParent<PauseMenu>();
         if (lightPlayer)
         {
             fallMultiplier = .5f;
