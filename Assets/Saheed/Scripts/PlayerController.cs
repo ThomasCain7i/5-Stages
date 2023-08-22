@@ -33,9 +33,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject PauseMenu;
     [SerializeField]PauseMenu refToPauseMenuScript;
-   
-    
-    
+
+    [Header("Polaroids")]
+    public int denial;
+    public int anger, bargaining, depression, acceptance;
 
     // Start is called before the first frame update
      private void OnCollisionEnter2D(Collision2D collision)
