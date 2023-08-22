@@ -6,7 +6,7 @@ public class DaBalancingScales : MonoBehaviour
 {
     public HingeJoint2D hingejoint;
     public Transform[] objectsOnScale;
-    public float balanceSpeed = 5f;
+    
 
     private void Start()
     {
