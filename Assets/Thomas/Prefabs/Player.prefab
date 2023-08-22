@@ -267,7 +267,7 @@ MonoBehaviour:
   lowJumpMultiplier: 2
   isAnimationPlaying: 0
   angerMeter: {fileID: 0}
-  pauseMenu: {fileID: 0}
+  pauseMenu: {fileID: 2408708664377143616, guid: 0ce4bc4800ad1ee46af3b8f882ed9620, type: 3}
 --- !u!50 &3803998810167911920
 Rigidbody2D:
   serializedVersion: 4
