@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     private AngerMeter angerMeter;
     [SerializeField]
     private PauseMenu pauseMenu;
+   
 
     // Start is called before the first frame update
      private void OnCollisionEnter2D(Collision2D collision)
@@ -48,7 +49,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
-
+        pauseMenu = GameObject.Find("Pause Menu").GetComponent<PauseMenu>();
         if (lightPlayer)
         {
             fallMultiplier = .5f;
