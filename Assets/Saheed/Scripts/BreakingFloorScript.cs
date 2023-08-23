@@ -4,27 +4,48 @@ using UnityEngine;
 
 public class BreakingFloorScript : MonoBehaviour
 {
-    public PlayerController refToPlayerControls;
-    // Start is called before the first frame update
-    void Start()
+  public PlayerController refToPlayerControls;
+  private bool tutHasPlayed;
+  private DialogueTrigger RefToDialogueTrigger;
+  // Start is called before the first frame update
+  void Start()
+  {
+    RefToDialogueTrigger = this.GetComponent<DialogueTrigger>();
+  }
+  void OnCollisionEnter2D(Collision2D other)
+  {
+    tutHasPlayed = true;
+    if (other.gameObject.CompareTag("Player"))
     {
-        
-    }
-     void OnCollisionStay2D(Collision2D other)
-   {
-     if (other.gameObject.CompareTag("Player") && refToPlayerControls.isInteracting)
+      if (RefToDialogueTrigger != null)
+      {
+        if (tutHasPlayed)
         {
-           BreakFloor();
+          RefToDialogueTrigger.TriggerDialogue();
+          Destroy(RefToDialogueTrigger);
         }
-   }
+      }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
-    void BreakFloor()
+
+  }
+
+  void OnCollisionStay2D(Collision2D other)
+  {
+
+    if (other.gameObject.CompareTag("Player") && refToPlayerControls.isInteracting)
     {
-        this.gameObject.SetActive(false);  
+      BreakFloor();
     }
+  }
+
+  // Update is called once per frame
+  void Update()
+  {
+
+  }
+  void BreakFloor()
+  {
+    this.gameObject.SetActive(false);
+  }
 }

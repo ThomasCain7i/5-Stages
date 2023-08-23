@@ -12,13 +12,20 @@ public class LeverScript : MonoBehaviour
     {
         RefToDialogueTrigger = this.GetComponent<DialogueTrigger>();
     }
+     void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            RefToDialogueTrigger.TriggerDialogue();
+            Destroy(RefToDialogueTrigger);
+        }
+    }
 
     // Update is called once per frame
    void OnTriggerStay2D(Collider2D other)
    {
      if (other.gameObject.CompareTag("Player") && refToPlayerControls.isInteracting)
         {
-            RefToDialogueTrigger.TriggerDialogue();
            leverFloorOpener();
         }
    }
