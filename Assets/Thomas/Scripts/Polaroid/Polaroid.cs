@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Polaroid : MonoBehaviour
@@ -20,31 +18,31 @@ public class Polaroid : MonoBehaviour
         {
             if(denial)
             {
-                playerController.denial = 1;  // Set fire bool to true
+                playerController.denial = 1;
                 Destroy(gameObject);
             }
 
             if (anger)
             {
-                playerController.anger = 1;  // Set fire bool to true
+                playerController.anger = 1;
                 Destroy(gameObject);
             }
 
             if (bargaining)
             {
-                playerController.bargaining = 1;  // Set fire bool to true
+                playerController.bargaining = 1;
                 Destroy(gameObject);
             }
 
             if (depression)
             {
-                playerController.depression = 1;  // Set fire bool to true
+                playerController.depression = 1;
                 Destroy(gameObject);
             }
 
             if (acceptance)
             {
-                playerController.acceptance = 1;  // Set fire bool to true
+                playerController.acceptance = 1;
                 Destroy(gameObject);
             }
         }
