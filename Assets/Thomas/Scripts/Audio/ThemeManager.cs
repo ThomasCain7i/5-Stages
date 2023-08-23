@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class ThemeManager : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class ThemeManager : MonoBehaviour
     [SerializeField]
     private float VolumeDenial, VolumeAnger, VolumeBargaining, VolumeDepression, VolumeAcceptance;
 
+    [Header("Fade")]
+    [SerializeField]
+    private float fadeDuration;
+
+    [Header("References")]
     [SerializeField]
     private AudioSource audioSource;
 
@@ -92,5 +98,24 @@ public class ThemeManager : MonoBehaviour
             audioSource.Play();
             Debug.Log("Play theme");
         }
+    }
+
+    public IEnumerator FadeOutAudio()
+    {
+        Debug.Log("Fading Out");
+
+        float startTime = Time.time;
+
+        while (Time.time - startTime < fadeDuration)
+        {
+            float elapsed = Time.time - startTime;
+            float t = elapsed / fadeDuration;
+
+            audioSource.volume = Mathf.Lerp(VolumeDepression, 0.0f, t);
+            yield return null;
+        }
+
+        // Ensure the volume reaches the exact target value
+        audioSource.volume = 0.0f;
     }
 }
