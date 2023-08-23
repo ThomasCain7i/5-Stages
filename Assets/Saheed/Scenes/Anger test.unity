@@ -2202,14 +2202,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 343548478}
-    - target: {fileID: 2315100968275684301, guid: d17988519f3851943a8776e04db48699, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DisplayNextSentence
-      objectReference: {fileID: 0}
-    - target: {fileID: 2315100968275684301, guid: d17988519f3851943a8776e04db48699, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DialogueManagerScript, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 2315100968559404305, guid: d17988519f3851943a8776e04db48699, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2298,22 +2290,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueButton
       objectReference: {fileID: 0}
-    - target: {fileID: 2315100969512433874, guid: d17988519f3851943a8776e04db48699, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 2315100969512433874, guid: d17988519f3851943a8776e04db48699, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 2315100969649792020, guid: d17988519f3851943a8776e04db48699, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 2315100969649792020, guid: d17988519f3851943a8776e04db48699, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d17988519f3851943a8776e04db48699, type: 3}
 --- !u!224 &1557145500 stripped
