@@ -18,25 +18,22 @@ public class LeverScript : MonoBehaviour
         
         if (other.gameObject.CompareTag("Player") && refToPlayerControls.isInteracting)
         {
-            disappearingFloor.SetActive(false);   
+           leverFloorOpener();
         }
     }
     void OnCollisionStay2D(Collision2D other)
     {
         if ( refToPlayerControls.isInteracting)
         {
-            disappearingFloor.SetActive(false);   
+           leverFloorOpener();
         }
     }
     void Update()
     {
        
     }
-    IEnumerator floorCollapseTimer() // What happens when you press the interact key
+    void leverFloorOpener()
     {
-        Debug.Log("Test");
-        yield return new WaitForSeconds(0.1f);
-        disappearingFloor.SetActive(false);
-       
+        disappearingFloor.SetActive(false);   
     }
 }
