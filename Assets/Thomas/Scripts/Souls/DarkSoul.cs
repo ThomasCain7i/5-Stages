@@ -16,6 +16,7 @@ public class DarkSoul : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            other.gameObject.transform.position.Set(0, 1, 0);
             Debug.Log("Player Touched Dark Soul");
         }
     }

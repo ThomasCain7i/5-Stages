@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WifeSoulTrigger : MonoBehaviour
@@ -9,13 +7,17 @@ public class WifeSoulTrigger : MonoBehaviour
 
     PlayerController playerController;
 
+    [SerializeField]
     WifeFade wifeFade;
 
     // Start is called before the first frame update
     void Start()
     {
         playerController = FindObjectOfType<PlayerController>();
-        wifeFade = wifeDelete.GetComponent<WifeFade>();
+        if (wifeFade == null )
+        {
+            wifeFade = wifeDelete.GetComponent<WifeFade>();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

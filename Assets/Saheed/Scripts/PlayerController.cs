@@ -28,7 +28,8 @@ public class PlayerController : MonoBehaviour
     bool isJumping, isGrounded, CanDJump, isDJumping;
     public bool isInteracting;
 
-
+    [Header("Spawn Point")]
+    public Vector2 spawnPoint;
 
     [Header("References")]
     [SerializeField]

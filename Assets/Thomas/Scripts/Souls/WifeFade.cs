@@ -14,6 +14,11 @@ public class WifeFade : MonoBehaviour
         animator.SetTrigger("WifeFade");
     }
 
+    public void FadeWifeIn()
+    {
+        animator.SetTrigger("WifeFadeIn");
+    }
+
     public void WifeDelete()
     {
         Destroy(gameObject);
