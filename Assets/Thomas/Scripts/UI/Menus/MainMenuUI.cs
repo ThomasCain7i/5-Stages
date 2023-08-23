@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuUI : MonoBehaviour
 {
-    public GameObject startMenu, mainMenu, creditsMenu, levelMenu;
+    public GameObject startMenu, mainMenu, creditsMenu, levelMenu, playAnim;
 
     public LevelLoader levelLoader;
     public PlayerController PlayerController;
@@ -25,6 +25,14 @@ public class MainMenuUI : MonoBehaviour
     public void PlayGame()
     {
         levelLoader.LoadLevel(1);
+    }
+
+    public void OpenPlayAnim()
+    {
+        creditsMenu.SetActive(false);
+        mainMenu.SetActive(false);
+        levelMenu.SetActive(false);
+        playAnim.SetActive(true);
     }
 
     public void OpenLevelSelect()
