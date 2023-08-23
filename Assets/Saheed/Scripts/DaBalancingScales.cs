@@ -5,7 +5,7 @@ using UnityEngine;
 public class DaBalancingScales : MonoBehaviour
 {
     public HingeJoint2D hingejoint;
-    public Transform[] objectsOnScale;
+    public Transform[] objectsOnScale; //Transform components of things being weighed
     
 
     private void Start()

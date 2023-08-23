@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movement")]
     [Range(100, 1000)]
-    [SerializeField]float Speed;
+    [SerializeField] float Speed;
     Rigidbody2D RB;
     float XInput, YInput;
 
@@ -26,27 +26,30 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private bool isAnimationPlaying = false;
     bool isJumping, isGrounded, CanDJump, isDJumping;
+    public bool isInteracting;
+
+
 
     [Header("References")]
     [SerializeField]
     private AngerMeter angerMeter;
     [SerializeField]
     private GameObject PauseMenu;
-    [SerializeField]PauseMenu refToPauseMenuScript;
+    PauseMenu refToPauseMenuScript;
 
     [Header("Polaroids")]
     public int denial;
     public int anger, bargaining, depression, acceptance;
 
     // Start is called before the first frame update
-     private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
         {
             //anim.SetBool("isGrounded", true);
             isGrounded = true;
             CanDJump = true;
-           // anim.ResetTrigger("isDJumping");
+            // anim.ResetTrigger("isDJumping");
         }
     }
 
@@ -72,7 +75,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Movement();
-
+        
         if (angerMeter != null)
         {
             Speed = angerMeter.angerSpeedPercentage;
@@ -86,6 +89,7 @@ public class PlayerController : MonoBehaviour
         {
             Time.timeScale = 1f;
         }
+
     }
 
 
@@ -106,7 +110,8 @@ public class PlayerController : MonoBehaviour
         XInput = Input.GetAxisRaw("Horizontal");
         YInput = Input.GetAxisRaw("Vertical");
         Jump();
-       
+        InteractingKey();
+
         //Flipping Sprite
 
         if (XInput >= 0.01f)
@@ -119,7 +124,7 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-      void Jump()
+    void Jump()
     {
         if (Input.GetButtonDown("Jump"))
         {
@@ -135,22 +140,25 @@ public class PlayerController : MonoBehaviour
             {
                 RB.velocity = Vector2.up * JumpVelocity;
                 CanDJump = false;
-               // anim.SetTrigger("isDJumping");
+                // anim.SetTrigger("isDJumping");
 
             }
         }
         else isJumping = false;
         if (isJumping == true)
         {
-           // anim.SetBool("isJumping", true);
+            // anim.SetBool("isJumping", true);
         }
         if (isJumping == false)
         {
-           // anim.SetBool("isJumping", false);
+            // anim.SetBool("isJumping", false);
         }
 
         BetterJump();
-        void BetterJump()
+
+
+    }
+    void BetterJump()
     {
         //Adds Weight and feel to the character's Jump <<<
         if (RB.velocity.y < 0)
@@ -162,8 +170,13 @@ public class PlayerController : MonoBehaviour
             RB.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
     }
-
+    void InteractingKey()
+    {
+        if (Input.GetKey(KeyCode.E))
+        {
+            isInteracting = true;
+        }
+        else isInteracting = false;
     }
-
 }
 
