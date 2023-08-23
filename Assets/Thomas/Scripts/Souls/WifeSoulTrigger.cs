@@ -5,7 +5,7 @@ using UnityEngine;
 public class WifeSoulTrigger : MonoBehaviour
 {
     [SerializeField]
-    private GameObject wife;
+    private GameObject wifeSpawn, wifeDelete, levelSpawn, levelDelete;
 
     PlayerController playerController;
 
@@ -19,6 +19,25 @@ public class WifeSoulTrigger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            if(wifeSpawn != null)
+            {
+                wifeSpawn.SetActive(true);
+            }
+
+            if(wifeDelete != null)
+            {
+                wifeDelete.SetActive(false);
+            }
+
+            if (levelSpawn != null)
+            {
+                levelSpawn.SetActive(true);
+            }
+
+            if (levelDelete != null)
+            {
+                levelDelete.SetActive(false);
+            }
 
         }
     }
