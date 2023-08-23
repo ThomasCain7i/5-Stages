@@ -6,28 +6,24 @@ public class LeverScript : MonoBehaviour
 {
     [SerializeField] GameObject disappearingFloor;
     public PlayerController refToPlayerControls;
+    private DialogueTrigger RefToDialogueTrigger;
     // Start is called before the first frame update
     void Start()
     {
-        
+        RefToDialogueTrigger = this.GetComponent<DialogueTrigger>();
     }
 
     // Update is called once per frame
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        
-        if (other.gameObject.CompareTag("Player") && refToPlayerControls.isInteracting)
+   void OnTriggerStay2D(Collider2D other)
+   {
+     if (other.gameObject.CompareTag("Player") && refToPlayerControls.isInteracting)
         {
+            RefToDialogueTrigger.TriggerDialogue();
            leverFloorOpener();
         }
-    }
-    void OnCollisionStay2D(Collision2D other)
-    {
-        if ( refToPlayerControls.isInteracting)
-        {
-           leverFloorOpener();
-        }
-    }
+   }
+
+   
     void Update()
     {
        
