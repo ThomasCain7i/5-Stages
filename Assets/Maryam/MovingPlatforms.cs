@@ -18,7 +18,7 @@ public class MovingPlatforms : MonoBehaviour
         
         float distance=(target-(Vector2)platform.position).magnitude;
 
-        if (distance <= distance.1f)
+        if (distance <= 1f)
         {
             direction *= -1;
         }
