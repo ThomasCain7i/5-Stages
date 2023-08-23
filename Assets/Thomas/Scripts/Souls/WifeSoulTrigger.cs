@@ -9,16 +9,20 @@ public class WifeSoulTrigger : MonoBehaviour
 
     PlayerController playerController;
 
+    WifeFade wifeFade;
+
     // Start is called before the first frame update
     void Start()
     {
         playerController = FindObjectOfType<PlayerController>();
+        wifeFade = wifeDelete.GetComponent<WifeFade>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
+            
             if(wifeSpawn != null)
             {
                 wifeSpawn.SetActive(true);
@@ -26,7 +30,7 @@ public class WifeSoulTrigger : MonoBehaviour
 
             if(wifeDelete != null)
             {
-                wifeDelete.SetActive(false);
+                wifeFade.FadeWife();
             }
 
             if (levelSpawn != null)
