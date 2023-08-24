@@ -10128,6 +10128,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1936484665}
     m_Modifications:
+    - target: {fileID: 2737756856466169209, guid: c2ea62fb9b5e302438ddff3d6ccda909, type: 3}
+      propertyPath: anger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2737756856466169209, guid: c2ea62fb9b5e302438ddff3d6ccda909, type: 3}
+      propertyPath: denial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2737756856466169210, guid: c2ea62fb9b5e302438ddff3d6ccda909, type: 3}
       propertyPath: m_Name
       value: Theme Manager
