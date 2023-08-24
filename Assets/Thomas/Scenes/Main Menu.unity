@@ -1009,6 +1009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e74642d6e00ecc84b81b6e9df26b3753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   heavyPlayer: 0
   lightPlayer: 0
   Speed: 0
@@ -3583,7 +3584,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 355d0f158a0565e4285bfd5acf9d22c0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3b32657aa641dd5458962cd5cf122fed, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
