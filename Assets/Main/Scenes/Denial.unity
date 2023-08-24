@@ -9559,6 +9559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecea616ebbd1cbd41bc70689916c6b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RefToDialogueTrigger: {fileID: 1612919717}
 --- !u!61 &1612919720
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9569,7 +9570,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -12363,7 +12364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2315100968559404305, guid: d17988519f3851943a8776e04db48699, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -453
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2315100968559404305, guid: d17988519f3851943a8776e04db48699, type: 3}
       propertyPath: m_AnchoredPosition.y

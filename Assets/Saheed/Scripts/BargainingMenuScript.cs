@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DiaTrig : MonoBehaviour
+public class BargainingMenuScript : MonoBehaviour
 {
-    public DialogueTrigger RefToDialogueTrigger;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +14,5 @@ public class DiaTrig : MonoBehaviour
     void Update()
     {
         
-    }
-    void OnTriggerEnter2D (Collider2D other)
-    {
-        RefToDialogueTrigger.TriggerDialogue();
-        Destroy(RefToDialogueTrigger);
     }
 }
