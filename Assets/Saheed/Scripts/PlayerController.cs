@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            //anim.SetBool("isGrounded", true);
+            anim.SetBool("isGrounded", true);
             isGrounded = true;
             CanDJump = true;
             // anim.ResetTrigger("isDJumping");
@@ -147,7 +147,7 @@ public class PlayerController : MonoBehaviour
                 RB.velocity = Vector2.up * JumpVelocity;
                 isJumping = true;
                 isGrounded = false;
-                //anim.SetBool("isGrounded", false);
+                anim.SetBool("isGrounded", false);
 
             }
             else if (!isGrounded && CanDJump == true)
@@ -189,8 +189,13 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E))
         {
+            anim.SetTrigger("InteractingKey");
             isInteracting = true;
         }
         else isInteracting = false;
+        if (!isInteracting)
+        {
+            anim.ResetTrigger("InteractingKey");
+        }
     }
 }
