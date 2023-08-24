@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Animator anim;
+
     [Header("Type Of Player")]
     [SerializeField]
     private bool heavyPlayer;
@@ -71,10 +73,15 @@ public class PlayerController : MonoBehaviour
             Speed = 100f;
         }
     }
-
+    private void FixedUpdate()
+    {
+        XInput = Input.GetAxis("Horizontal") * Speed * Time.deltaTime;
+        RB.velocity = new Vector2(XInput, RB.velocity.y);
+    }
     // Update is called once per frame
     void Update()
     {
+        Animation();
         Movement();
         
         if (angerMeter != null)
@@ -99,12 +106,13 @@ public class PlayerController : MonoBehaviour
     {
         isAnimationPlaying = isPlaying;
     }
-
-    private void FixedUpdate()
+    void Animation()
     {
-        XInput = Input.GetAxis("Horizontal") * Speed * Time.deltaTime;
-        RB.velocity = new Vector2(XInput, RB.velocity.y);
+        //walking animation
+        anim.SetFloat("Speed", Mathf.Abs(XInput));
+       
     }
+   
     void Movement()
     {
         //Input
@@ -117,11 +125,11 @@ public class PlayerController : MonoBehaviour
 
         if (XInput >= 0.01f)
         {
-            transform.localScale = new Vector3(1f, 1f, 1f);
+            transform.localScale = new Vector3(-1f, 1f, 1f);
         }
         else if (XInput <= -0.01f)
         {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
+            transform.localScale = new Vector3(1f, 1f, 1f);
         }
 
     }
