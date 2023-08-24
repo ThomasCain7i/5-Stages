@@ -39,10 +39,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject PauseMenu;
     PauseMenu refToPauseMenuScript;
+    GameManager gameManager;
+
+
 
     [Header("Polaroids")]
     public int denial;
-    public int anger, bargaining, depression, acceptance;
+    public int anger, bargaining, depression, acceptance, final;
 
     // Start is called before the first frame update
     private void OnCollisionEnter2D(Collision2D collision)
@@ -58,6 +61,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
+        gameManager.LoadSettings();
         RB = GetComponent<Rigidbody2D>();
         refToPauseMenuScript = PauseMenu.GetComponentInParent<PauseMenu>();
         if (lightPlayer)

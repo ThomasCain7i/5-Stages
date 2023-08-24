@@ -37,8 +37,6 @@ public class MovingPlatforms : MonoBehaviour
         }
     }
 
-
-
     private void OnDrawGizmos()
     {
         //just for Debug visualization
@@ -47,8 +45,5 @@ public class MovingPlatforms : MonoBehaviour
             Gizmos.DrawLine(platform.transform. position, startPoint.transform.position);
             Gizmos.DrawLine(platform.transform.position, endPoint.transform.position);
         }
-
     }
-
-
 }

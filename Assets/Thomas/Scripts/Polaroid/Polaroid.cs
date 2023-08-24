@@ -3,14 +3,14 @@ using UnityEngine;
 public class Polaroid : MonoBehaviour
 {
     [Header("Polaroids")]
-    public bool denial, anger, bargaining, depression, acceptance;
+    public bool denial;
+    public bool anger, bargaining, depression, acceptance;
 
     private PlayerController playerController;
 
     private void Start()
     {
-        playerController = GetComponent<PlayerController>();
-        
+        playerController = FindObjectOfType<PlayerController>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)

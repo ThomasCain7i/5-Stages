@@ -14,18 +14,14 @@ public class WifeSoulTrigger : MonoBehaviour
     void Start()
     {
         playerController = FindObjectOfType<PlayerController>();
-        if (wifeFade == null )
-        {
-            wifeFade = wifeDelete.GetComponent<WifeFade>();
-        }
+        wifeFade = wifeDelete.GetComponent<WifeFade>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            
-            if(wifeSpawn != null)
+            if (wifeSpawn != null)
             {
                 wifeSpawn.SetActive(true);
             }
