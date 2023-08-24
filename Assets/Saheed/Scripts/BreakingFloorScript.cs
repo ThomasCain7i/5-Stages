@@ -11,6 +11,7 @@ public class BreakingFloorScript : MonoBehaviour
   void Start()
   {
     RefToDialogueTrigger = this.GetComponent<DialogueTrigger>();
+        refToPlayerControls = FindObjectOfType<PlayerController>();
   }
   void OnCollisionEnter2D(Collision2D other)
   {
