@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadSettings()
     {
-        playerController.denial = PlayerPrefs.GetInt("despair");
+        playerController.denial = PlayerPrefs.GetInt("denial");
         playerController.anger = PlayerPrefs.GetInt("anger");
         playerController.bargaining = PlayerPrefs.GetInt("bargaining");
         playerController.depression = PlayerPrefs.GetInt("depression");
