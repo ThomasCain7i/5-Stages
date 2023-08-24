@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     [Header("Player Bools")]
     [SerializeField]
     private bool isAnimationPlaying = false;
-    bool isJumping, isGrounded, CanDJump, isDJumping;
+    public bool isJumping, isGrounded, CanDJump, isDJumping;
     public bool isInteracting;
 
     [Header("Spawn Point")]
@@ -78,13 +78,13 @@ public class PlayerController : MonoBehaviour
             Speed = 100f;
         }
     }
-    
+
     // Update is called once per frame
     void Update()
     {
         Animation();
         Movement();
-        
+
         if (angerMeter != null)
         {
             Speed = angerMeter.angerSpeedPercentage;
@@ -115,9 +115,9 @@ public class PlayerController : MonoBehaviour
     {
         //walking animation
         anim.SetFloat("Speed", Mathf.Abs(XInput));
-       
+
     }
-   
+
     void Movement()
     {
         //Input
@@ -161,8 +161,8 @@ public class PlayerController : MonoBehaviour
         else isJumping = false;
         if (isJumping == true)
         {
-             anim.SetBool("isJumping", true);
-            
+            anim.SetBool("isJumping", true);
+
         }
         if (isJumping == false)
         {
@@ -194,4 +194,3 @@ public class PlayerController : MonoBehaviour
         else isInteracting = false;
     }
 }
-
