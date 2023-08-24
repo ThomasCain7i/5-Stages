@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject PauseMenu;
     PauseMenu refToPauseMenuScript;
+    [SerializeField]
     GameManager gameManager;
 
 
