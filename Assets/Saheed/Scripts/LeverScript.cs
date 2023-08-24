@@ -7,6 +7,7 @@ public class LeverScript : MonoBehaviour
     [SerializeField] GameObject disappearingFloor;
     public PlayerController refToPlayerControls;
     private DialogueTrigger RefToDialogueTrigger;
+    bool DialogueTrig;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +15,19 @@ public class LeverScript : MonoBehaviour
     }
      void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (!DialogueTrig)
         {
             RefToDialogueTrigger.TriggerDialogue();
-            Destroy(RefToDialogueTrigger);
+        }
+        else if (DialogueTrig)
+        {
+           
+        }
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            DialogueTrig = true;
+           
         }
     }
 

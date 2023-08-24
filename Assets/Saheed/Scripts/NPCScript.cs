@@ -6,6 +6,7 @@ public class NPCScript : MonoBehaviour
 {
     private DialogueTrigger RefToDialogueTrigger;
      public PlayerController refToPlayerControls;
+     public GameObject refToBargainMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,7 @@ public class NPCScript : MonoBehaviour
      if (other.gameObject.CompareTag("Player") && refToPlayerControls.isInteracting)
         {
             RefToDialogueTrigger.TriggerDialogue();
+            StartCoroutine(waitAFewSeconds());
              
         }
    }
@@ -24,5 +26,10 @@ public class NPCScript : MonoBehaviour
     void Update()
     {
         
+    }
+    IEnumerator waitAFewSeconds()
+    {
+        yield return new WaitForSeconds(1f);
+        refToBargainMenu.SetActive(true);
     }
 }
