@@ -8,6 +8,9 @@ public class DepressionFadeIn : MonoBehaviour
     public float VolumeAcceptance; // Initial volume for the fade-in
     public float fadeDuration; // Duration of the fade-in
 
+    [SerializeField]
+    private GameObject monster;
+
     private void Start()
     {
         // Initialize audioSource if not assigned
@@ -19,6 +22,10 @@ public class DepressionFadeIn : MonoBehaviour
 
     public void PlayDepressionChase()
     {
+        monster.SetActive(true);
+
+        Debug.Log("Monster Spawned");
+
         if (depressionChaseTheme.Length > 0)
         {
             int randomIndex = Random.Range(0, depressionChaseTheme.Length);
