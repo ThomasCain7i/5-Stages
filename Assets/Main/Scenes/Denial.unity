@@ -2491,8 +2491,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4981658551769396883, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
+      propertyPath: m_LookAt
+      value: 
+      objectReference: {fileID: 1666511521}
+    - target: {fileID: 4981658551769396883, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 8
+      value: 3.32
       objectReference: {fileID: 0}
     - target: {fileID: 4981658551769396884, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10141,6 +10145,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1666511521 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4981658553500658913, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
+  m_PrefabInstance: {fileID: 364086132}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1670567199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10786,7 +10795,7 @@ MonoBehaviour:
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
   m_UpdateMethod: 2
-  m_BlendUpdateMethod: 1
+  m_BlendUpdateMethod: 0
   m_DefaultBlend:
     m_Style: 1
     m_Time: 2
@@ -10838,7 +10847,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 3.32
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
