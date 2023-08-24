@@ -12447,9 +12447,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1672219563}
     m_Modifications:
+    - target: {fileID: 518272247178995920, guid: bd936a7c6343fd7428feac8f5bcfd63c, type: 3}
+      propertyPath: m_Radius
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 518272247178995921, guid: bd936a7c6343fd7428feac8f5bcfd63c, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 518272247178995921, guid: bd936a7c6343fd7428feac8f5bcfd63c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 518272247178995921, guid: bd936a7c6343fd7428feac8f5bcfd63c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 518272247178995921, guid: bd936a7c6343fd7428feac8f5bcfd63c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12494,6 +12506,10 @@ PrefabInstance:
     - target: {fileID: 518272247178995922, guid: bd936a7c6343fd7428feac8f5bcfd63c, type: 3}
       propertyPath: m_Name
       value: Circle
+      objectReference: {fileID: 0}
+    - target: {fileID: 518272247178995935, guid: bd936a7c6343fd7428feac8f5bcfd63c, type: 3}
+      propertyPath: m_FlipX
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd936a7c6343fd7428feac8f5bcfd63c, type: 3}
