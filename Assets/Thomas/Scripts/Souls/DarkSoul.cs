@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DarkSoul : MonoBehaviour
 {
@@ -14,10 +13,12 @@ public class DarkSoul : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player")) // Use CompareTag for better performance
         {
-            other.gameObject.transform.position.Set(0, 1, 0);
             Debug.Log("Player Touched Dark Soul");
+
+            // Reload the scene
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

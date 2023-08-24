@@ -6,6 +6,10 @@ public class Polaroid : MonoBehaviour
     public bool denial;
     public bool anger, bargaining, depression, acceptance;
 
+    [Header("Destroy Object")]
+    [SerializeField]
+    private GameObject Floor;
+
     private PlayerController playerController;
 
     private void Start()
@@ -20,6 +24,12 @@ public class Polaroid : MonoBehaviour
             if(denial)
             {
                 playerController.denial = 1;
+
+                if(Floor  != null)
+                {
+                    Destroy(Floor);
+                }
+
                 Destroy(gameObject);
             }
 
