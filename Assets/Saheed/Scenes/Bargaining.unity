@@ -1075,18 +1075,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4981658551769396884, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.2256284
-      objectReference: {fileID: 0}
-    - target: {fileID: 4981658551769396884, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.4901488
-      objectReference: {fileID: 0}
-    - target: {fileID: 4981658553500658912, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
-      propertyPath: Speed
-      value: 523
-      objectReference: {fileID: 0}
     - target: {fileID: 4981658553500658912, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
       propertyPath: PauseMenu
       value: 
@@ -1137,10 +1125,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4981658553500658915, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4981658553500658915, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
