@@ -189,9 +189,14 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E))
         {
+            anim.SetTrigger("InteractingKey");
             isInteracting = true;
         }
         else isInteracting = false;
+        if (!isInteracting)
+        {
+            anim.ResetTrigger("InteractingKey");
+        }
     }
 }
 
