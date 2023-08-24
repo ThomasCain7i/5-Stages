@@ -161,12 +161,11 @@ public class PlayerController : MonoBehaviour
         else isJumping = false;
         if (isJumping == true)
         {
-             anim.SetBool("isJumping", true);
-            
+            // anim.SetBool("isJumping", true);
         }
         if (isJumping == false)
         {
-            anim.SetBool("isJumping", false);
+            // anim.SetBool("isJumping", false);
         }
 
         BetterJump();
