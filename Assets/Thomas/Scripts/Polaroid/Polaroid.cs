@@ -10,6 +10,7 @@ public class Polaroid : MonoBehaviour
     private void Start()
     {
         playerController = GetComponent<PlayerController>();
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
