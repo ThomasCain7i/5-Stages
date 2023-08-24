@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     [Header("Player Bools")]
     [SerializeField]
     private bool isAnimationPlaying = false;
-    public bool isJumping, isGrounded, CanDJump, isDJumping;
+    public bool isJumping, isGrounded, CanDJump, isDJumping, isCrouching;
     public bool isInteracting;
 
     [Header("Spawn Point")]
@@ -137,13 +137,21 @@ public class PlayerController : MonoBehaviour
         
             
         }
-        if (YInput <= -0.01f)
+        if (isCrouching)
         {
-            anim.SetBool("isCrouching", true);
+            anim.SetTrigger("isCrouching");
         }
-        else if (YInput >= 0.01f)
+        if (!isCrouching)
         {
             anim.SetBool("isCrouching", false);
+        }
+        if (YInput <= -0.01f)
+        {
+          isCrouching = true;
+        }
+        if (YInput >= 0.0f)
+        {
+           isCrouching = false;
         }
 
     }
