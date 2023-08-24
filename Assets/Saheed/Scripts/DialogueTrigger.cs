@@ -11,6 +11,4 @@ public class DialogueTrigger : MonoBehaviour
     {
         FindObjectOfType<DialogueManagerScript>().StartDialogue(dialogue);
     }
-  
-   
 }
