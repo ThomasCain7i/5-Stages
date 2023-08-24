@@ -115,12 +115,6 @@ public class PlayerController : MonoBehaviour
     {
         //walking animation
         anim.SetFloat("Speed", Mathf.Abs(XInput));
-<<<<<<< Updated upstream
-
-=======
-       //crouching animation
-       
->>>>>>> Stashed changes
     }
 
     void Movement()
