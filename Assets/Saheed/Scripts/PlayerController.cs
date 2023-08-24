@@ -78,11 +78,7 @@ public class PlayerController : MonoBehaviour
             Speed = 100f;
         }
     }
-    private void FixedUpdate()
-    {
-        XInput = Input.GetAxis("Horizontal") * Speed * Time.deltaTime;
-        RB.velocity = new Vector2(XInput, RB.velocity.y);
-    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -104,7 +100,11 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
+    private void FixedUpdate()
+    {
+        XInput = Input.GetAxis("Horizontal") * Speed * Time.deltaTime;
+        RB.velocity = new Vector2(XInput, RB.velocity.y);
+    }
 
 
     public void SetAnimationPlaying(bool isPlaying)
