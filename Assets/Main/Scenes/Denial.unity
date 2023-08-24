@@ -1404,6 +1404,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6188764240315303589, guid: 6421d7cccce1ecf4fa627bd4e99a2b16, type: 3}
   m_PrefabInstance: {fileID: 6188764240186157804}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &139324491 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6188764240315303584, guid: 6421d7cccce1ecf4fa627bd4e99a2b16, type: 3}
+  m_PrefabInstance: {fileID: 6188764240186157804}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139324488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59a48dc082cfb5e41af621e5ef6e3e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &156603258 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 518272247178995921, guid: bd936a7c6343fd7428feac8f5bcfd63c, type: 3}
@@ -6942,7 +6953,7 @@ MonoBehaviour:
   wifeDelete: {fileID: 139324488}
   levelSpawn: {fileID: 0}
   levelDelete: {fileID: 0}
-  wifeFade: {fileID: 0}
+  wifeFade: {fileID: 139324491}
 --- !u!61 &1103988286
 BoxCollider2D:
   m_ObjectHideFlags: 0

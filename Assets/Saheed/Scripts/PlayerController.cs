@@ -115,7 +115,12 @@ public class PlayerController : MonoBehaviour
     {
         //walking animation
         anim.SetFloat("Speed", Mathf.Abs(XInput));
+<<<<<<< Updated upstream
 
+=======
+       //crouching animation
+       
+>>>>>>> Stashed changes
     }
 
     void Movement()
@@ -135,6 +140,16 @@ public class PlayerController : MonoBehaviour
         else if (XInput <= -0.01f)
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
+        
+            
+        }
+        if (YInput <= -0.01f)
+        {
+            anim.SetBool("isCrouching", true);
+        }
+        else if (YInput >= 0.01f)
+        {
+            anim.SetBool("isCrouching", false);
         }
 
     }
@@ -189,10 +204,13 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E))
         {
-            anim.SetTrigger("InteractingKey");
             isInteracting = true;
         }
         else isInteracting = false;
+        if (isInteracting)
+        {
+           anim.SetTrigger("InteractingKey") ;
+        }
         if (!isInteracting)
         {
             anim.ResetTrigger("InteractingKey");
