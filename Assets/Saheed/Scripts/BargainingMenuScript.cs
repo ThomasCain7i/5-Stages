@@ -45,5 +45,6 @@ public class BargainingMenuScript : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
+    
 
 }

@@ -8,10 +8,12 @@ public class LeverScript : MonoBehaviour
     public PlayerController refToPlayerControls;
     private DialogueTrigger RefToDialogueTrigger;
     bool DialogueTrig;
+    public Sprite LeverActivated, defaultSprite;
     // Start is called before the first frame update
     void Start()
     {
         RefToDialogueTrigger = this.GetComponent<DialogueTrigger>();
+        defaultSprite = GetComponentInChildren<SpriteRenderer>().sprite;
     }
      void OnTriggerEnter2D(Collider2D other)
     {
@@ -47,6 +49,8 @@ public class LeverScript : MonoBehaviour
     }
     void leverFloorOpener()
     {
-        disappearingFloor.SetActive(false);   
+        disappearingFloor.SetActive(false);
+        defaultSprite = LeverActivated;
+        GetComponentInChildren<SpriteRenderer>().sprite = defaultSprite;   
     }
 }
