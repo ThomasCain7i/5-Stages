@@ -3008,6 +3008,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8102504238240786230, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
+      propertyPath: RefToPlayerAnimator
+      value: 
+      objectReference: {fileID: 423882142}
     - target: {fileID: 8102504238240786231, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3206,6 +3210,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8102504238240786230, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
+      propertyPath: RefToPlayerAnimator
+      value: 
+      objectReference: {fileID: 423882142}
     - target: {fileID: 8102504238240786231, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4388,6 +4396,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411594538}
   m_CullTransparentMesh: 1
+--- !u!95 &423882142 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5081116721222945563, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
+  m_PrefabInstance: {fileID: 1267779678}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &424821315
 GameObject:
   m_ObjectHideFlags: 0
@@ -5868,6 +5881,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8102504238240786230, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
+      propertyPath: RefToPlayerAnimator
+      value: 
+      objectReference: {fileID: 423882142}
     - target: {fileID: 8102504238240786231, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -8054,6 +8071,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8102504238240786230, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
+      propertyPath: RefToPlayerAnimator
+      value: 
+      objectReference: {fileID: 423882142}
     - target: {fileID: 8102504238240786231, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -10338,6 +10359,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8102504238240786230, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
+      propertyPath: RefToPlayerAnimator
+      value: 
+      objectReference: {fileID: 423882142}
     - target: {fileID: 8102504238240786231, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -11121,6 +11146,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8102504238240786230, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
+      propertyPath: RefToPlayerAnimator
+      value: 
+      objectReference: {fileID: 423882142}
     - target: {fileID: 8102504238240786231, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -12509,6 +12538,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8102504238240786230, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
+      propertyPath: RefToPlayerAnimator
+      value: 
+      objectReference: {fileID: 423882142}
     - target: {fileID: 8102504238240786230, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
       propertyPath: refToPlayerControls
       value: 
@@ -14273,7 +14306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8102504238240786228, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8102504238240786228, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
       propertyPath: m_LocalScale.x
@@ -14323,6 +14356,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8102504238240786230, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
+      propertyPath: RefToPlayerAnimator
+      value: 
+      objectReference: {fileID: 423882142}
     - target: {fileID: 8102504238240786231, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -14477,6 +14514,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8102504238240786230, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
+      propertyPath: RefToPlayerAnimator
+      value: 
+      objectReference: {fileID: 423882142}
     - target: {fileID: 8102504238240786231, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -15080,6 +15121,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8102504238240786230, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
+      propertyPath: RefToPlayerAnimator
+      value: 
+      objectReference: {fileID: 423882142}
     - target: {fileID: 8102504238240786231, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -15465,6 +15510,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8102504238240786230, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
+      propertyPath: RefToPlayerAnimator
+      value: 
+      objectReference: {fileID: 423882142}
     - target: {fileID: 8102504238240786231, guid: 66dea8caa9b95ad44bfc582fc5f8cfa8, type: 3}
       propertyPath: m_Sprite
       value: 

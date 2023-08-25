@@ -6,6 +6,7 @@ public class BreakingFloorScript : MonoBehaviour
 {
   public PlayerController refToPlayerControls;
   private bool tutHasPlayed;
+  public Animator RefToPlayerAnimator;
   private DialogueTrigger RefToDialogueTrigger;
   // Start is called before the first frame update
   void Start()
@@ -36,6 +37,7 @@ public class BreakingFloorScript : MonoBehaviour
 
     if (other.gameObject.CompareTag("Player") && refToPlayerControls.isInteracting)
     {
+      RefToPlayerAnimator.SetTrigger("isPunching");
       BreakFloor();
     }
   }
@@ -47,6 +49,7 @@ public class BreakingFloorScript : MonoBehaviour
   }
   void BreakFloor()
   {
+    
     this.gameObject.SetActive(false);
   }
 }
