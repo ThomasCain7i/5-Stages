@@ -12,11 +12,15 @@ public class NPCScript : MonoBehaviour
     {
          RefToDialogueTrigger = this.GetComponent<DialogueTrigger>();
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+         RefToDialogueTrigger.TriggerDialogue();
+    }
     void OnTriggerStay2D(Collider2D other)
    {
      if (other.gameObject.CompareTag("Player") && refToPlayerControls.isInteracting)
         {
-            RefToDialogueTrigger.TriggerDialogue();
+           
             StartCoroutine(waitAFewSeconds());
              
         }
