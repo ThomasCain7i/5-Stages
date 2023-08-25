@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Main/Scenes/Acceptance.unity
     guid: 851eba2b4f0bec94899d1b9a85f0c78e
+  - enabled: 1
+    path: Assets/Main/Scenes/Ending.unity
+    guid: 885d35dca45129842814c3925f35ce6e
   m_configObjects: {}
