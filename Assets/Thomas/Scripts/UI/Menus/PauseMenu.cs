@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -59,8 +60,8 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
-        areYouSureUI.SetActive(false);
         Time.timeScale = 1f;
-        levelLoader.LoadLevel(0);
+        SceneManager.LoadScene("Main Menu");
+        Resume();
     }
 }
