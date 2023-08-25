@@ -22,9 +22,39 @@ public class DepressionManager : MonoBehaviour
         {
             timer -= Time.deltaTime;
 
-            if (timer <= 0)
+            if (one && timer <= 0)
             {
-                Destroy(gameObject);
+                Destroy(text1);
+            }
+
+            if (two && timer <= 0)
+            {
+                Destroy(text2);
+            }
+
+            if (three && timer <= 0)
+            {
+                Destroy(text3);
+            }
+
+            if (four && timer <= 0)
+            {
+                Destroy(text4);
+            }
+
+            if (five && timer <= 0)
+            {
+                Destroy(text5);
+            }
+
+            if (six && timer <= 0)
+            {
+                Destroy(text6);
+            }
+
+            if (seven && timer <= 0)
+            {
+                Destroy(text7);
             }
         }
     }
