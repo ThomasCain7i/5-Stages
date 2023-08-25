@@ -20,6 +20,7 @@ public class MainMenuUI : MonoBehaviour
         creditsMenu.SetActive(false);
         mainMenu.SetActive(true);
         levelMenu.SetActive(false);
+        startMenu.SetActive(false);
     }
 
     public void PlayGame()
