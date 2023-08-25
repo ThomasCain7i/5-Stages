@@ -5945,7 +5945,7 @@ GameObject:
   - component: {fileID: 649196419}
   - component: {fileID: 649196418}
   m_Layer: 0
-  m_Name: 5. Anger Polaroid
+  m_Name: 2. Anger Polaroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
