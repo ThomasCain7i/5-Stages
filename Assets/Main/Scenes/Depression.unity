@@ -3984,10 +3984,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: 0
-  denial: 1
+  denial: 0
   anger: 0
   bargaining: 0
-  depression: 0
+  depression: 1
   acceptance: 0
   menuTheme:
   - {fileID: 8300000, guid: d4e8c0b4917c2844ca9f8a010da41660, type: 3}
