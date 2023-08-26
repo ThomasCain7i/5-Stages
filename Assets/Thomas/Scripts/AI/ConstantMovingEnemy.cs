@@ -9,18 +9,18 @@ public class ConstantMovingEnemy : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        transform.SetParent(player);
     }
 
     private void Update()
     {
-        // Calculate the direction from the enemy to the player
-        Vector2 directionToPlayer = (player.position - transform.position).normalized;
+        // Get the player's y-axis position
+        float targetY = player.position.y;
 
-        // Calculate the target position for the enemy to move towards the player
-        Vector2 targetPosition = (Vector2)transform.position + directionToPlayer * moveSpeed * Time.deltaTime;
+        // Calculate the target position for the enemy on the x-axis
+        Vector2 targetPosition = new Vector2(transform.position.x + moveSpeed * Time.deltaTime, targetY);
 
-        // Move the enemy towards the player
+        // Move the enemy towards the target position
         transform.position = targetPosition;
     }
 }
+
