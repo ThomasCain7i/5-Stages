@@ -1,50 +1,60 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class BargainingMenuScript : MonoBehaviour
 {
-    public GameObject refToWrongChoicePanel, refToRightChoicePanel;
+    public GameObject KeyPanel, LocketPanel, CameraPanel, ShellPanel, RingPanel;
     bool youMadeTheRightChoice;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public void RightChoice()
+    public void Shell()
     {
         youMadeTheRightChoice = true;
-        refToRightChoicePanel.SetActive(true);
-        refToWrongChoicePanel.SetActive(false);
+        ShellPanel.SetActive(true);
+        KeyPanel.SetActive(false);
+        LocketPanel.SetActive(false);
+        CameraPanel.SetActive(false);
+        RingPanel.SetActive(false);
+
         if (youMadeTheRightChoice)
         {
             StartCoroutine(WaitForACoupleSecs());
         }
+    }
 
-    }
-     public void WrongChoice()
+    public void Key()
     {
-        refToWrongChoicePanel.SetActive(true);
-        refToRightChoicePanel.SetActive(false);
+        KeyPanel.SetActive(true);
     }
+
+    public void Ring()
+    {
+        RingPanel.SetActive(true);
+    }
+
+    public void Locket()
+    {
+        LocketPanel.SetActive(true);
+    }
+
+    public void Camera()
+    {
+        CameraPanel.SetActive(true);
+    }
+
+
     public void Closebox()
     {
-         refToWrongChoicePanel.SetActive(false);
-        refToRightChoicePanel.SetActive(false);
+        ShellPanel.SetActive(false);
+        KeyPanel.SetActive(false);
+        LocketPanel.SetActive(false);
+        CameraPanel.SetActive(false);
+        RingPanel.SetActive(false);
     }
+
     IEnumerator WaitForACoupleSecs()
     {
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
     }
-    
-
 }

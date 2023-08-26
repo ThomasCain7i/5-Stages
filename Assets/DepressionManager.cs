@@ -15,8 +15,6 @@ public class DepressionManager : MonoBehaviour
 
     [SerializeField]
     Animator animator;
-    [SerializeField]
-    ConstantMovingEnemy constantMovingEnemy;
 
     private void Update()
     {
