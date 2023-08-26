@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Animator anim;
+    public GameObject monster;
 
     [Header("Type Of Player")]
     [SerializeField]
@@ -217,6 +218,16 @@ public class PlayerController : MonoBehaviour
         if (!isInteracting)
         {
             anim.ResetTrigger("InteractingKey");
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Death"))
+        {
+            Destroy(monster);
+            anim.SetTrigger("Death");
+            Speed = 0;
         }
     }
 }

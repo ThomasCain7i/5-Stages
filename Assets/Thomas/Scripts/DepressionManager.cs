@@ -8,7 +8,7 @@ public class DepressionManager : MonoBehaviour
     private GameObject text1, text2, text3, text4, text5, text6, text7, monster;
 
     [SerializeField]
-    private bool one, two, three, four, five, six, seven, crack1, crack2, timerB, monsterSpawn;
+    private bool one, two, three, four, five, six, seven, crack1, crack2, crack3, timerB, monsterSpawn;
 
     [SerializeField]
     private float timer = 5f;
@@ -103,7 +103,6 @@ public class DepressionManager : MonoBehaviour
             {
                 text7.SetActive(true);
                 timerB = true;
-                Destroy(monster);
             }
 
             if (crack1)
@@ -115,6 +114,11 @@ public class DepressionManager : MonoBehaviour
             if (crack2)
             {
                 animator.SetBool("Crack2", true);
+            }
+
+            if (crack3)
+            {
+                animator.SetBool("Crack3", true);
             }
 
             if (monsterSpawn)
