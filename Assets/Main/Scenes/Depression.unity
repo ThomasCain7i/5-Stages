@@ -352,11 +352,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4981658553500658912, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
       propertyPath: anger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4981658553500658912, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
       propertyPath: denial
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4981658553500658912, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
       propertyPath: PauseMenu
@@ -364,7 +364,7 @@ PrefabInstance:
       objectReference: {fileID: 1156393660}
     - target: {fileID: 4981658553500658912, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
       propertyPath: bargaining
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4981658553500658912, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
       propertyPath: heavyPlayer
