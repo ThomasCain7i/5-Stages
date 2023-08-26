@@ -854,8 +854,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 515636683}
-  m_Father: {fileID: 1520423991}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &76863250
 GameObject:
@@ -4592,7 +4592,6 @@ Transform:
   - {fileID: 560862329}
   - {fileID: 1860089078}
   - {fileID: 484976518}
-  - {fileID: 499034979}
   - {fileID: 1192720430}
   - {fileID: 907662725}
   - {fileID: 2145737575}
@@ -4738,7 +4737,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387705208}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.03, y: -8.13, z: 0}
+  m_LocalPosition: {x: 9.1, y: -8.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5608,8 +5607,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 875239599}
-  m_Father: {fileID: 377254241}
-  m_RootOrder: 3
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &502110441
 GameObject:
@@ -10461,7 +10460,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 875239598}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.95, y: -6.54, z: 0}
+  m_LocalPosition: {x: 69.1, y: -6.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10922,7 +10921,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 377254241}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &913496379
 GameObject:
@@ -11285,7 +11284,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1520423991}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &932045117
 MonoBehaviour:
@@ -13346,7 +13345,7 @@ Transform:
   - {fileID: 375428102}
   - {fileID: 1886839710}
   m_Father: {fileID: 377254241}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1204258634
 GameObject:
@@ -15225,7 +15224,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1785492452}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1335635204
 BoxCollider2D:
@@ -16824,7 +16823,7 @@ Transform:
   - {fileID: 632722163}
   - {fileID: 1808947287}
   m_Father: {fileID: 1785492452}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1489544919
 GameObject:
@@ -17031,14 +17030,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494198231}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 387705209}
-  m_Father: {fileID: 1785492452}
-  m_RootOrder: 4
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1499803889
 GameObject:
@@ -17101,7 +17100,6 @@ Transform:
   m_Children:
   - {fileID: 574209940}
   - {fileID: 265911415}
-  - {fileID: 74649238}
   - {fileID: 1672219563}
   - {fileID: 932045116}
   m_Father: {fileID: 0}
@@ -17214,7 +17212,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 377254241}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1546822046
 BoxCollider2D:
@@ -19095,7 +19093,7 @@ Transform:
   - {fileID: 590947066}
   - {fileID: 850592}
   m_Father: {fileID: 1520423991}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1693897622
 GameObject:
@@ -20148,7 +20146,6 @@ Transform:
   - {fileID: 742737921}
   - {fileID: 1086068025}
   - {fileID: 1366841165}
-  - {fileID: 1494198232}
   - {fileID: 1487774913}
   - {fileID: 1335635203}
   m_Father: {fileID: 0}
@@ -22939,7 +22936,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 377254241}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2145737576
 BoxCollider2D:
