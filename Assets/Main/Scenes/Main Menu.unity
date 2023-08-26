@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: George
+  m_text: George R
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 559e55c34aee1c4459b93cb01f7b2c62, type: 2}
   m_sharedMaterial: {fileID: 5929922127202872600, guid: 1604f8cf72c0d3f429c9539d8177532a, type: 2}
@@ -1789,7 +1789,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: HiroHana
+  m_text: HirauHana
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 559e55c34aee1c4459b93cb01f7b2c62, type: 2}
   m_sharedMaterial: {fileID: 5929922127202872600, guid: 1604f8cf72c0d3f429c9539d8177532a, type: 2}
@@ -2290,7 +2290,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Despair
+  m_text: Denial
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 559e55c34aee1c4459b93cb01f7b2c62, type: 2}
   m_sharedMaterial: {fileID: 5396392944039680268, guid: 559e55c34aee1c4459b93cb01f7b2c62, type: 2}
@@ -5450,7 +5450,7 @@ MonoBehaviour:
   SaheedURL: https://saheedkazeem.itch.io/
   DillonURL: https://dylanchambore.itch.io/
   HannahURL: https://www.instagram.com/hirauhana/
-  GeorgeURL: 
+  GeorgeURL: https://george-r.itch.io/
 --- !u!114 &1935772061
 MonoBehaviour:
   m_ObjectHideFlags: 0
