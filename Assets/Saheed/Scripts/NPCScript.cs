@@ -19,14 +19,12 @@ public class NPCScript : MonoBehaviour
     }
 
     void OnTriggerStay2D(Collider2D other)
-   {
-     if (other.gameObject.CompareTag("Player") && refToPlayerControls.isInteracting)
+    {
+        if (other.gameObject.CompareTag("Player") && refToPlayerControls.isInteracting)
         {
-           
             StartCoroutine(waitAFewSeconds());
-             
         }
-   }
+    }
 
     IEnumerator waitAFewSeconds()
     {
