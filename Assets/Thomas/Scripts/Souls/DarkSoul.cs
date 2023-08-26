@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class DarkSoul : MonoBehaviour
 {
+    [SerializeField]
     PlayerController playerController;
 
     // Start is called before the first frame update

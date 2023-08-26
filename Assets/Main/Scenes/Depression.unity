@@ -3562,7 +3562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3509597661332513325, guid: 6753885599211554c865830d62770c95, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3509597661332513327, guid: 6753885599211554c865830d62770c95, type: 3}
       propertyPath: m_FlipX
@@ -4962,7 +4962,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.8892956, y: -0.28623724}
+  m_Offset: {x: 7.7453003, y: -2.3482108}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4973,7 +4973,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.778591, y: 0.42752552}
+  m_Size: {x: 16.4906, y: 0.67496204}
   m_EdgeRadius: 0
 --- !u!114 &751824531
 MonoBehaviour:
@@ -4994,7 +4994,7 @@ MonoBehaviour:
   text5: {fileID: 0}
   text6: {fileID: 0}
   text7: {fileID: 0}
-  monster: {fileID: 0}
+  monster: {fileID: 2048858555}
   one: 0
   two: 1
   three: 0
@@ -5005,8 +5005,10 @@ MonoBehaviour:
   crack1: 0
   crack2: 0
   timerB: 0
-  timer: 4
+  monsterSpawn: 0
+  timer: 5
   animator: {fileID: 2048858557}
+  constantMovingEnemy: {fileID: 2048858561}
 --- !u!1 &757406365
 GameObject:
   m_ObjectHideFlags: 0
@@ -6735,7 +6737,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.3694458, y: 0}
+  m_Offset: {x: 8.421284, y: -1.7526779}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6746,7 +6748,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.7388916, y: 1}
+  m_Size: {x: 17.842567, y: 0.9587593}
   m_EdgeRadius: 0
 --- !u!114 &1114985904
 MonoBehaviour:
@@ -6767,7 +6769,7 @@ MonoBehaviour:
   text5: {fileID: 0}
   text6: {fileID: 2088283373}
   text7: {fileID: 0}
-  monster: {fileID: 0}
+  monster: {fileID: 2048858555}
   one: 0
   two: 0
   three: 0
@@ -6778,8 +6780,10 @@ MonoBehaviour:
   crack1: 0
   crack2: 1
   timerB: 0
-  timer: 4
+  monsterSpawn: 0
+  timer: 5
   animator: {fileID: 2048858557}
+  constantMovingEnemy: {fileID: 2048858561}
 --- !u!1 &1125959061
 GameObject:
   m_ObjectHideFlags: 0
@@ -6982,7 +6986,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.6652565, y: 0}
+  m_Offset: {x: 8.397543, y: -1.4846206}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6993,7 +6997,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.330513, y: 1}
+  m_Size: {x: 17.795086, y: 0.835042}
   m_EdgeRadius: 0
 --- !u!114 &1157567394
 MonoBehaviour:
@@ -7014,7 +7018,7 @@ MonoBehaviour:
   text5: {fileID: 0}
   text6: {fileID: 0}
   text7: {fileID: 0}
-  monster: {fileID: 0}
+  monster: {fileID: 2048858555}
   one: 0
   two: 0
   three: 1
@@ -7025,8 +7029,10 @@ MonoBehaviour:
   crack1: 0
   crack2: 0
   timerB: 0
-  timer: 4
+  monsterSpawn: 0
+  timer: 5
   animator: {fileID: 2048858557}
+  constantMovingEnemy: {fileID: 2048858561}
 --- !u!1 &1194536076
 GameObject:
   m_ObjectHideFlags: 0
@@ -7342,7 +7348,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.3731499, y: 0}
+  m_Offset: {x: 5.249546, y: -1.1134663}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7353,7 +7359,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.7462997, y: 1}
+  m_Size: {x: 11.499092, y: 1.2474365}
   m_EdgeRadius: 0
 --- !u!114 &1213079788
 MonoBehaviour:
@@ -7385,8 +7391,10 @@ MonoBehaviour:
   crack1: 0
   crack2: 0
   timerB: 0
-  timer: 4
+  monsterSpawn: 0
+  timer: 5
   animator: {fileID: 2048858557}
+  constantMovingEnemy: {fileID: 2048858561}
 --- !u!1 &1220430679
 GameObject:
   m_ObjectHideFlags: 0
@@ -8706,7 +8714,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.8218193, y: 0}
+  m_Offset: {x: 8.729431, y: -1.5670996}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8717,7 +8725,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.6436386, y: 1}
+  m_Size: {x: 18.458862, y: 0.9175205}
   m_EdgeRadius: 0
 --- !u!114 &1415691156
 MonoBehaviour:
@@ -8738,7 +8746,7 @@ MonoBehaviour:
   text5: {fileID: 346686135}
   text6: {fileID: 0}
   text7: {fileID: 0}
-  monster: {fileID: 0}
+  monster: {fileID: 2048858555}
   one: 0
   two: 0
   three: 0
@@ -8749,8 +8757,10 @@ MonoBehaviour:
   crack1: 1
   crack2: 0
   timerB: 0
-  timer: 4
+  monsterSpawn: 0
+  timer: 5
   animator: {fileID: 2048858557}
+  constantMovingEnemy: {fileID: 2048858561}
 --- !u!1 &1422079018
 GameObject:
   m_ObjectHideFlags: 0
@@ -11643,7 +11653,7 @@ MonoBehaviour:
   text5: {fileID: 0}
   text6: {fileID: 0}
   text7: {fileID: 0}
-  monster: {fileID: 0}
+  monster: {fileID: 2048858555}
   one: 1
   two: 0
   three: 0
@@ -11654,8 +11664,10 @@ MonoBehaviour:
   crack1: 0
   crack2: 0
   timerB: 0
-  timer: 4
+  monsterSpawn: 1
+  timer: 5
   animator: {fileID: 2048858557}
+  constantMovingEnemy: {fileID: 2048858561}
 --- !u!61 &1965778351
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11669,7 +11681,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.9561195, y: 0.14663303}
+  m_Offset: {x: 7.8902187, y: -0.82016146}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -11680,7 +11692,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.912239, y: 1.293266}
+  m_Size: {x: 16.780437, y: 0.84705234}
   m_EdgeRadius: 0
 --- !u!1 &1974474380
 GameObject:
@@ -12144,6 +12156,56 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 4767580867032715041, guid: 6753885599211554c865830d62770c95, type: 3}
   m_PrefabInstance: {fileID: 570813160}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &2048858559
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048858555}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.106801, y: 0.7148094}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.95, y: 7.58}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.139292, y: 3.2911434}
+  m_EdgeRadius: 0
+--- !u!114 &2048858560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048858555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e9ab314577b722449d5086ca3c50a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 737483895}
+--- !u!114 &2048858561 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3509597661332513326, guid: 6753885599211554c865830d62770c95, type: 3}
+  m_PrefabInstance: {fileID: 570813160}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048858555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2cc8d99396c307459f893ba8b3cc328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2056597946
 GameObject:
   m_ObjectHideFlags: 0
@@ -12755,7 +12817,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 17.847088, y: 0}
+  m_Offset: {x: 24.548504, y: -1.3196626}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -12766,7 +12828,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.8460693, y: 1}
+  m_Size: {x: 18.248901, y: 1.164958}
   m_EdgeRadius: 0
 --- !u!114 &2098150850
 MonoBehaviour:
@@ -12787,7 +12849,7 @@ MonoBehaviour:
   text5: {fileID: 0}
   text6: {fileID: 0}
   text7: {fileID: 0}
-  monster: {fileID: 0}
+  monster: {fileID: 2048858555}
   one: 0
   two: 0
   three: 0
@@ -12798,5 +12860,7 @@ MonoBehaviour:
   crack1: 0
   crack2: 0
   timerB: 0
-  timer: 4
+  monsterSpawn: 0
+  timer: 5
   animator: {fileID: 2048858557}
+  constantMovingEnemy: {fileID: 2048858561}

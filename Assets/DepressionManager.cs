@@ -8,13 +8,15 @@ public class DepressionManager : MonoBehaviour
     private GameObject text1, text2, text3, text4, text5, text6, text7, monster;
 
     [SerializeField]
-    private bool one, two, three, four, five, six, seven, crack1, crack2, timerB;
+    private bool one, two, three, four, five, six, seven, crack1, crack2, timerB, monsterSpawn;
 
     [SerializeField]
     private float timer = 5f;
 
     [SerializeField]
     Animator animator;
+    [SerializeField]
+    ConstantMovingEnemy constantMovingEnemy;
 
     private void Update()
     {
@@ -115,6 +117,11 @@ public class DepressionManager : MonoBehaviour
             if (crack2)
             {
                 animator.SetBool("Crack2", true);
+            }
+
+            if (monsterSpawn)
+            {
+                monster.SetActive(true);
             }
         }
     }
