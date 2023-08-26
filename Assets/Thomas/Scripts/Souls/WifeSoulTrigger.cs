@@ -40,7 +40,6 @@ public class WifeSoulTrigger : MonoBehaviour
             {
                 levelDelete.SetActive(false);
             }
-
         }
     }
 }
