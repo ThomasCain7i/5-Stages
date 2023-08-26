@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 public class NextSceneActions : MonoBehaviour
 {
     GameManager gameManager;
+    [SerializeField]
+    Animator animator;
 
     private void Start()
     {
@@ -14,7 +16,13 @@ public class NextSceneActions : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             gameManager.SavePolaroid();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            animator.SetBool("Shell", true);
         }
+    }
+
+    public void NextLevel()
+    {
+        gameManager.SavePolaroid();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

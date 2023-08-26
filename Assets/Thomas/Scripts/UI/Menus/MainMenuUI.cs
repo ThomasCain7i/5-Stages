@@ -25,7 +25,7 @@ public class MainMenuUI : MonoBehaviour
 
     public void PlayGame()
     {
-        levelLoader.LoadLevel(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void OpenPlayAnim()

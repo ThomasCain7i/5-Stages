@@ -7,6 +7,9 @@ public class BargainingMenuScript : MonoBehaviour
     public GameObject KeyPanel, LocketPanel, CameraPanel, ShellPanel, RingPanel;
     bool youMadeTheRightChoice;
 
+    [SerializeField]
+    Animator animator;
+
     public void Shell()
     {
         youMadeTheRightChoice = true;
@@ -18,7 +21,7 @@ public class BargainingMenuScript : MonoBehaviour
 
         if (youMadeTheRightChoice)
         {
-            StartCoroutine(WaitForACoupleSecs());
+            WaitForACoupleSecs();
         }
     }
 
@@ -52,9 +55,8 @@ public class BargainingMenuScript : MonoBehaviour
         RingPanel.SetActive(false);
     }
 
-    IEnumerator WaitForACoupleSecs()
+    private void WaitForACoupleSecs()
     {
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        animator.SetBool("Shell", true);
     }
 }
