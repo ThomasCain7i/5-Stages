@@ -62,8 +62,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        gameManager = FindObjectOfType<GameManager>();
-        gameManager.LoadSettings();
+        //gameManager = FindObjectOfType<GameManager>();
+        //gameManager.LoadSettings();
         RB = GetComponent<Rigidbody2D>();
         refToPauseMenuScript = PauseMenu.GetComponentInParent<PauseMenu>();
         if (lightPlayer)

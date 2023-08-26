@@ -12,9 +12,12 @@ public class Polaroid : MonoBehaviour
 
     private PlayerController playerController;
 
+    private GameManager gameManager;
+
     private void Start()
     {
         playerController = FindObjectOfType<PlayerController>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -24,6 +27,7 @@ public class Polaroid : MonoBehaviour
             if(denial)
             {
                 playerController.denial = 1;
+                gameManager.SavePolaroid();
 
                 if(Floor  != null)
                 {
@@ -36,24 +40,28 @@ public class Polaroid : MonoBehaviour
             if (anger)
             {
                 playerController.anger = 1;
+                gameManager.SavePolaroid();
                 Destroy(gameObject);
             }
 
             if (bargaining)
             {
                 playerController.bargaining = 1;
+                gameManager.SavePolaroid();
                 Destroy(gameObject);
             }
 
             if (depression)
             {
                 playerController.depression = 1;
+                gameManager.SavePolaroid();
                 Destroy(gameObject);
             }
 
             if (acceptance)
             {
                 playerController.acceptance = 1;
+                gameManager.SavePolaroid();
                 Destroy(gameObject);
             }
         }
