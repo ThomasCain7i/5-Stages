@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 5081116721222945563}
+  monster: {fileID: 0}
   heavyPlayer: 0
   lightPlayer: 0
   Speed: 523
@@ -268,10 +269,16 @@ MonoBehaviour:
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   isAnimationPlaying: 0
+  isJumping: 0
+  isGrounded: 0
+  CanDJump: 0
+  isDJumping: 0
+  isCrouching: 0
   isInteracting: 0
   spawnPoint: {x: 0, y: 0}
   angerMeter: {fileID: 0}
   PauseMenu: {fileID: 0}
+  gameManager: {fileID: 0}
   denial: 0
   anger: 0
   bargaining: 0
@@ -294,7 +301,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ab3b552a62e1e6740a2c1a12bd729bb6, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
