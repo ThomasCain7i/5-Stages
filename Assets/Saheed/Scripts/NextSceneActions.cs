@@ -25,4 +25,9 @@ public class NextSceneActions : MonoBehaviour
         gameManager.SavePolaroid();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void StopAnimation()
+    {
+        animator.SetBool("Start", false);
+    }
 }
