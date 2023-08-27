@@ -820,6 +820,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.65, y: 1.4175067}
   m_EdgeRadius: 0
+--- !u!1 &89943826 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2315100968559404306, guid: d17988519f3851943a8776e04db48699, type: 3}
+  m_PrefabInstance: {fileID: 1722432533}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &104111096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1887,7 +1892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &241485900
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3383,6 +3388,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.38, y: 1.02}
   m_EdgeRadius: 0
+--- !u!114 &356427047 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2315100969512433874, guid: d17988519f3851943a8776e04db48699, type: 3}
+  m_PrefabInstance: {fileID: 1722432533}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &362522369
 GameObject:
   m_ObjectHideFlags: 0
@@ -7429,11 +7445,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f28b03af3e493404aa6410eea6422a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RefToAnimator: {fileID: 0}
+  RefToAnimator: {fileID: 1722432536}
   nameText: {fileID: 0}
-  dialogueText: {fileID: 0}
-  RefToDialogueBox: {fileID: 0}
-  RefToSkipButton: {fileID: 0}
+  dialogueText: {fileID: 356427047}
+  RefToDialogueBox: {fileID: 89943826}
+  RefToSkipButton: {fileID: 1994463133}
   HasSentenceEnded: 0
 --- !u!114 &918829138
 MonoBehaviour:
@@ -11089,7 +11105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14108,7 +14124,7 @@ PrefabInstance:
     - target: {fileID: 2315100968275684301, guid: d17988519f3851943a8776e04db48699, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 918829137}
     - target: {fileID: 2315100968275684301, guid: d17988519f3851943a8776e04db48699, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DisplayNextSentence
@@ -14338,6 +14354,11 @@ PrefabInstance:
 --- !u!224 &1722432534 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2315100968559404305, guid: d17988519f3851943a8776e04db48699, type: 3}
+  m_PrefabInstance: {fileID: 1722432533}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1722432536 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2315100968559404308, guid: d17988519f3851943a8776e04db48699, type: 3}
   m_PrefabInstance: {fileID: 1722432533}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1776242204
@@ -16084,6 +16105,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.38, y: 1.02}
   m_EdgeRadius: 0
+--- !u!1 &1994463133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2315100968275684303, guid: d17988519f3851943a8776e04db48699, type: 3}
+  m_PrefabInstance: {fileID: 1722432533}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2000400443
 PrefabInstance:
   m_ObjectHideFlags: 0
