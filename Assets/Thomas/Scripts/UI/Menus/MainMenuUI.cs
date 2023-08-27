@@ -28,6 +28,11 @@ public class MainMenuUI : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void OpenPlayAnim()
     {
         creditsMenu.SetActive(false);
