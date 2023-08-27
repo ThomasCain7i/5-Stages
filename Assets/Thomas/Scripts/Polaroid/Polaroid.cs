@@ -4,7 +4,7 @@ public class Polaroid : MonoBehaviour
 {
     [Header("Polaroids")]
     public bool denial;
-    public bool anger, bargaining, depression, acceptance;
+    public bool anger, bargaining, depression, acceptance, final;
 
     [Header("Destroy Object")]
     [SerializeField]
@@ -61,6 +61,13 @@ public class Polaroid : MonoBehaviour
             if (acceptance)
             {
                 playerController.acceptance = 1;
+                gameManager.SavePolaroid();
+                Destroy(gameObject);
+            }
+
+            if (final)
+            {
+                playerController.final = 1;
                 gameManager.SavePolaroid();
                 Destroy(gameObject);
             }
