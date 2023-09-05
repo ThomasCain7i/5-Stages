@@ -51,12 +51,12 @@ public class PlayerController : MonoBehaviour
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
+
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (refToPauseMenuScript != null)
-        {
+      
+      
             refToPauseMenuScript = FindObjectOfType<PauseMenu>();
-        }
 
 
     }
