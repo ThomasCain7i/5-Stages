@@ -83,7 +83,9 @@ public class MainMenuUI : MonoBehaviour
     {
         if (refToGameManager.anger == 1)
         {
+            Debug.Log("test");
             levelLoader.LoadLevel(2);
+            
         }
     }
 

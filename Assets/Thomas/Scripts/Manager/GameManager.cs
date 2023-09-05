@@ -39,8 +39,8 @@ public class GameManager : MonoBehaviour
 
     public void LoadSettings()
     {
-        if (playerController != null)
-        {
+        
+        
             denial = PlayerPrefs.GetInt("denial");
             anger = PlayerPrefs.GetInt("anger");
             bargaining = PlayerPrefs.GetInt("bargaining");
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
             acceptance = PlayerPrefs.GetInt("acceptance");
 
             Debug.Log("Loaded Polaroids");
-        }
+        
 
     }
 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PolaroidsPaused : MonoBehaviour
 {
@@ -15,6 +16,23 @@ public class PolaroidsPaused : MonoBehaviour
     [Header("Refs")]
     PauseMenu pauseMenu;
     private GameManager gameManager;
+     void Awake()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+      
+      
+       gameManager = FindObjectOfType<GameManager>();
+
+
+    }
+    private void OnDestroy()
+    {
+        // Unsubscribe from the sceneLoaded event to prevent memory leaks
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 
     // Start is called before the first frame update
     void Start()
