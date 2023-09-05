@@ -9,14 +9,11 @@ public class Polaroid : MonoBehaviour
     [Header("Destroy Object")]
     [SerializeField]
     private GameObject Floor;
-
-    private PlayerController playerController;
-
     private GameManager gameManager;
 
     private void Start()
     {
-        playerController = FindObjectOfType<PlayerController>();
+        
         gameManager = FindObjectOfType<GameManager>();
     }
 
@@ -26,7 +23,7 @@ public class Polaroid : MonoBehaviour
         {
             if(denial)
             {
-                playerController.denial = 1;
+                gameManager.denial = 1;
                 gameManager.SavePolaroid();
 
                 if(Floor  != null)
@@ -39,35 +36,35 @@ public class Polaroid : MonoBehaviour
 
             if (anger)
             {
-                playerController.anger = 1;
+                gameManager.anger = 1;
                 gameManager.SavePolaroid();
                 Destroy(gameObject);
             }
 
             if (bargaining)
             {
-                playerController.bargaining = 1;
+                gameManager.bargaining = 1;
                 gameManager.SavePolaroid();
                 Destroy(gameObject);
             }
 
             if (depression)
             {
-                playerController.depression = 1;
+                gameManager.depression = 1;
                 gameManager.SavePolaroid();
                 Destroy(gameObject);
             }
 
             if (acceptance)
             {
-                playerController.acceptance = 1;
+                gameManager.acceptance = 1;
                 gameManager.SavePolaroid();
                 Destroy(gameObject);
             }
 
             if (final)
             {
-                playerController.final = 1;
+                gameManager.final = 1;
                 gameManager.SavePolaroid();
                 Destroy(gameObject);
             }

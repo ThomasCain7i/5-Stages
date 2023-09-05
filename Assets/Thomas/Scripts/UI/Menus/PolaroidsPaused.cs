@@ -4,9 +4,7 @@ public class PolaroidsPaused : MonoBehaviour
 {
     [Header("Polaroids")]
     [SerializeField]
-    private GameObject denial;
-    [SerializeField]
-    private GameObject anger, bargaining, depression, acceptance, final;
+    private GameObject refToAnger, refToDenial, refToBargaining, refToDepression, refToAcceptance, refToFinal;
 
     [Header("Polaroids Big")]
     [SerializeField]
@@ -16,13 +14,13 @@ public class PolaroidsPaused : MonoBehaviour
 
     [Header("Refs")]
     PauseMenu pauseMenu;
-    PlayerController playerController;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
         pauseMenu = FindObjectOfType<PauseMenu>();
-        playerController = FindObjectOfType<PlayerController>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -30,34 +28,34 @@ public class PolaroidsPaused : MonoBehaviour
     {
         if (pauseMenu.isPaused)
         {
-            if (playerController.denial == 1)
+            if (gameManager.denial == 1)
             {
-                denial.SetActive(true);
+                refToDenial.SetActive(true);
             }
 
-            if (playerController.anger == 1)
+            if (gameManager.anger == 1)
             {
-                anger.SetActive(true);
+                refToAnger.SetActive(true);
             }
 
-            if (playerController.bargaining == 1)
+            if (gameManager.bargaining == 1)
             {
-                bargaining.SetActive(true);
+                refToBargaining.SetActive(true);
             }
 
-            if (playerController.depression == 1)
+            if (gameManager.depression == 1)
             {
-                depression.SetActive(true);
+                refToDepression.SetActive(true);
             }
 
-            if (playerController.acceptance == 1)
+            if (gameManager.acceptance == 1)
             {
-                acceptance.SetActive(true);
+                refToAcceptance.SetActive(true);
             }
 
-            if (playerController.final == 1)
+            if (gameManager.final == 1)
             {
-                final.SetActive(true);
+                refToFinal.SetActive(true);
             }
         }
     }

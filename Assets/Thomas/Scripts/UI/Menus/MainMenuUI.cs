@@ -8,11 +8,12 @@ public class MainMenuUI : MonoBehaviour
     public GameObject startMenu, mainMenu, creditsMenu, levelMenu, playAnim;
 
     public LevelLoader levelLoader;
-    public PlayerController PlayerController;
+    public GameManager refToGameManager;
 
     public void Start()
     {
         levelLoader = FindObjectOfType<LevelLoader>();
+        refToGameManager = FindObjectOfType<GameManager>();
     }
 
     public void StartMenu()
@@ -71,7 +72,7 @@ public class MainMenuUI : MonoBehaviour
 
     public void DespairLevel()
     {
-        if (PlayerController.denial == 1)
+        if (refToGameManager.denial == 1)
         {
             levelLoader.LoadLevel(1);
         }
@@ -80,7 +81,7 @@ public class MainMenuUI : MonoBehaviour
 
     public void AngerLevel()
     {
-        if (PlayerController.anger == 1)
+        if (refToGameManager.anger == 1)
         {
             levelLoader.LoadLevel(2);
         }
@@ -88,7 +89,7 @@ public class MainMenuUI : MonoBehaviour
 
     public void BargainingLevel()
     {
-        if (PlayerController.bargaining == 1)
+        if (refToGameManager.bargaining == 1)
         {
             levelLoader.LoadLevel(3);
         }
@@ -96,7 +97,7 @@ public class MainMenuUI : MonoBehaviour
 
     public void DepressionLevel()
     {
-        if (PlayerController.depression == 1)
+        if (refToGameManager.depression == 1)
         {
             levelLoader.LoadLevel(4);
         }
@@ -104,7 +105,7 @@ public class MainMenuUI : MonoBehaviour
 
     public void AcceptanceLevel()
     {
-        if (PlayerController.acceptance == 1)
+        if (refToGameManager.acceptance == 1)
         {
             levelLoader.LoadLevel(5);
         }

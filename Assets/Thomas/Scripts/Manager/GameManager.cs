@@ -5,27 +5,33 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     public PlayerController playerController;
 
-
+    [Header("Polaroids")]
+    public int denial, anger, bargaining, depression, acceptance, final;
     private const string denialKey = "denial";
     private const string angerKey = "anger";
     private const string bargainingKey = "bargaining";
     private const string depressionKey = "depression";
     private const string acceptanceKey = "acceptance";
 
+
     public void Start()
     {
-        playerController = FindObjectOfType<PlayerController>();
+        if (playerController != null)
+        {
+            playerController = FindObjectOfType<PlayerController>();
+        }
+
 
         LoadSettings();
     }
 
     public void SavePolaroid()
     {
-        PlayerPrefs.SetInt(denialKey, playerController.denial);
-        PlayerPrefs.SetInt(angerKey, playerController.anger);
-        PlayerPrefs.SetInt(bargainingKey, playerController.bargaining);
-        PlayerPrefs.SetInt(depressionKey, playerController.depression);
-        PlayerPrefs.SetInt(acceptanceKey, playerController.acceptance);
+        PlayerPrefs.SetInt(denialKey, denial);
+        PlayerPrefs.SetInt(angerKey, anger);
+        PlayerPrefs.SetInt(bargainingKey, bargaining);
+        PlayerPrefs.SetInt(depressionKey, depression);
+        PlayerPrefs.SetInt(acceptanceKey, acceptance);
         PlayerPrefs.Save();
 
         Debug.Log("Saved Polaroids");
@@ -33,13 +39,17 @@ public class GameManager : MonoBehaviour
 
     public void LoadSettings()
     {
-        playerController.denial = PlayerPrefs.GetInt("denial");
-        playerController.anger = PlayerPrefs.GetInt("anger");
-        playerController.bargaining = PlayerPrefs.GetInt("bargaining");
-        playerController.depression = PlayerPrefs.GetInt("depression");
-        playerController.acceptance = PlayerPrefs.GetInt("acceptance");
+        if (playerController != null)
+        {
+            denial = PlayerPrefs.GetInt("denial");
+            anger = PlayerPrefs.GetInt("anger");
+            bargaining = PlayerPrefs.GetInt("bargaining");
+            depression = PlayerPrefs.GetInt("depression");
+            acceptance = PlayerPrefs.GetInt("acceptance");
 
-        Debug.Log("Loaded Polaroids");
+            Debug.Log("Loaded Polaroids");
+        }
+
     }
 
     public void ResetProgress()
