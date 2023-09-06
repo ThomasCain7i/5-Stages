@@ -1789,6 +1789,8 @@ MonoBehaviour:
   depressionBig: {fileID: 0}
   acceptanceBig: {fileID: 0}
   finalBig: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &4970841231016176363
 GameObject:
   m_ObjectHideFlags: 0

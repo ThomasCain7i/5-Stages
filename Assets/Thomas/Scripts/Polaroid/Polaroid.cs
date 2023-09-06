@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Polaroid : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Polaroid : MonoBehaviour
     [SerializeField]
     private GameObject Floor;
     private GameManager gameManager;
+
 
     private void Start()
     {

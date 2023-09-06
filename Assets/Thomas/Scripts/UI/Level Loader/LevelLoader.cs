@@ -16,14 +16,20 @@ public class LevelLoader : MonoBehaviour
     IEnumerator LoadAsynchronously (int sceneIndex)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
-
-        loadingScreen.SetActive(true);
+        if (loadingScreen != null)
+        {
+            loadingScreen.SetActive(true);
+        }
+        
 
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / .9f);
-
-            slider.value = progress;
+            if (slider != null)
+            {
+                slider.value = progress;
+            }
+            
 
             yield return null;
         }

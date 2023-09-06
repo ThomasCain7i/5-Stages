@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,9 +7,28 @@ public class PauseMenu : MonoBehaviour
     public bool isPaused = false;
 
     public GameObject pauseMenuUI, areYouSureUI, Main;
+    public PolaroidsPaused RefToPolaroidPause;
 
     [SerializeField]
     private LevelLoader levelLoader;
+     void Awake()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        Debug.Log("Hi Hi");
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+
+        RefToPolaroidPause.pauseMenu = FindObjectOfType<PauseMenu>();
+        RefToPolaroidPause.gameManager = FindObjectOfType<GameManager>();
+
+
+    }
+    private void OnDestroy()
+    {
+        // Unsubscribe from the sceneLoaded event to prevent memory leaks
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 
     private void Start()
     {
@@ -64,4 +84,5 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
         Resume();
     }
+
 }

@@ -39,16 +39,16 @@ public class GameManager : MonoBehaviour
 
     public void LoadSettings()
     {
-        
-        
-            denial = PlayerPrefs.GetInt("denial");
-            anger = PlayerPrefs.GetInt("anger");
-            bargaining = PlayerPrefs.GetInt("bargaining");
-            depression = PlayerPrefs.GetInt("depression");
-            acceptance = PlayerPrefs.GetInt("acceptance");
 
-            Debug.Log("Loaded Polaroids");
-        
+
+        denial = PlayerPrefs.GetInt("denial");
+        anger = PlayerPrefs.GetInt("anger");
+        bargaining = PlayerPrefs.GetInt("bargaining");
+        depression = PlayerPrefs.GetInt("depression");
+        acceptance = PlayerPrefs.GetInt("acceptance");
+
+        Debug.Log("Loaded Polaroids");
+
 
     }
 
