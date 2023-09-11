@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Common;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -45,9 +47,24 @@ public class PlayerController : MonoBehaviour
 
 
 
-    [Header("Polaroids")]
-    public int denial;
-    public int anger, bargaining, depression, acceptance, final;
+    void Awake()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+      
+      
+            refToPauseMenuScript = FindObjectOfType<PauseMenu>();
+
+
+    }
+    private void OnDestroy()
+    {
+        // Unsubscribe from the sceneLoaded event to prevent memory leaks
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 
     // Start is called before the first frame update
     private void OnCollisionEnter2D(Collision2D collision)
@@ -65,8 +82,9 @@ public class PlayerController : MonoBehaviour
     {
         //gameManager = FindObjectOfType<GameManager>();
         //gameManager.LoadSettings();
+        anim = GetComponentInChildren<Animator>();
         RB = GetComponent<Rigidbody2D>();
-        refToPauseMenuScript = PauseMenu.GetComponentInParent<PauseMenu>();
+
         if (lightPlayer)
         {
             fallMultiplier = .5f;
@@ -84,22 +102,27 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Animation();
-        Movement();
+        if (this.GetComponentInChildren<Animator>() != null)
+        {
+            Animation();
+            Movement();
 
-        if (angerMeter != null)
-        {
-            Speed = angerMeter.angerSpeedPercentage;
+
+            if (angerMeter != null)
+            {
+                Speed = angerMeter.angerSpeedPercentage;
+            }
+
+            if (isAnimationPlaying == true || refToPauseMenuScript.isPaused)
+            {
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                Time.timeScale = 1f;
+            }
         }
 
-        if (isAnimationPlaying == true || refToPauseMenuScript.isPaused)
-        {
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            Time.timeScale = 1f;
-        }
 
     }
     private void FixedUpdate()
@@ -136,8 +159,8 @@ public class PlayerController : MonoBehaviour
         else if (XInput <= -0.01f)
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
-        
-            
+
+
         }
         if (isCrouching)
         {
@@ -149,11 +172,11 @@ public class PlayerController : MonoBehaviour
         }
         if (YInput <= -0.01f)
         {
-          isCrouching = true;
+            isCrouching = true;
         }
         if (YInput >= 0.0f)
         {
-           isCrouching = false;
+            isCrouching = false;
         }
 
     }
@@ -213,7 +236,7 @@ public class PlayerController : MonoBehaviour
         else isInteracting = false;
         if (isInteracting)
         {
-           anim.SetTrigger("InteractingKey") ;
+            anim.SetTrigger("InteractingKey");
         }
         if (!isInteracting)
         {

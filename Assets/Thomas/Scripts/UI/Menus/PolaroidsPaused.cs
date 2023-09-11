@@ -1,12 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PolaroidsPaused : MonoBehaviour
+
 {
     [Header("Polaroids")]
     [SerializeField]
-    private GameObject denial;
-    [SerializeField]
-    private GameObject anger, bargaining, depression, acceptance, final;
+    private GameObject refToAnger, refToDenial, refToBargaining, refToDepression, refToAcceptance, refToFinal;
 
     [Header("Polaroids Big")]
     [SerializeField]
@@ -15,51 +15,75 @@ public class PolaroidsPaused : MonoBehaviour
     private GameObject angerBig, bargainingBig, depressionBig, acceptanceBig, finalBig;
 
     [Header("Refs")]
-    PauseMenu pauseMenu;
-    PlayerController playerController;
+    public PauseMenu pauseMenu;
+    public GameManager gameManager;
+   
+   
+     void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        Debug.Log("Has been enabled");
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+
+        pauseMenu = FindObjectOfType<PauseMenu>();
+        gameManager = FindObjectOfType<GameManager>();
+
+
+    }
+    private void OnDestroy()
+    {
+        // Unsubscribe from the sceneLoaded event to prevent memory leaks
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        pauseMenu = FindObjectOfType<PauseMenu>();
-        playerController = FindObjectOfType<PlayerController>();
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (pauseMenu.isPaused)
+        if (pauseMenu != null)
         {
-            if (playerController.denial == 1)
+            if (pauseMenu.isPaused)
             {
-                denial.SetActive(true);
-            }
+                if (gameManager.denial == 1)
+                {
+                    refToDenial.SetActive(true);
+                }
 
-            if (playerController.anger == 1)
-            {
-                anger.SetActive(true);
-            }
+                if (gameManager.anger == 1)
+                {
+                    refToAnger.SetActive(true);
+                }
 
-            if (playerController.bargaining == 1)
-            {
-                bargaining.SetActive(true);
-            }
+                if (gameManager.bargaining == 1)
+                {
+                    refToBargaining.SetActive(true);
+                }
 
-            if (playerController.depression == 1)
-            {
-                depression.SetActive(true);
-            }
+                if (gameManager.depression == 1)
+                {
+                    refToDepression.SetActive(true);
+                }
 
-            if (playerController.acceptance == 1)
-            {
-                acceptance.SetActive(true);
-            }
+                if (gameManager.acceptance == 1)
+                {
+                    refToAcceptance.SetActive(true);
+                }
 
-            if (playerController.final == 1)
-            {
-                final.SetActive(true);
+                if (gameManager.final == 1)
+                {
+                    refToFinal.SetActive(true);
+                }
             }
         }
+
     }
 
     public void ClosePolaroid()
