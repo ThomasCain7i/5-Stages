@@ -3278,7 +3278,7 @@ MonoBehaviour:
   VolumeBargaining: 1
   VolumeDepression: 1
   VolumeAcceptance: 1
-  fadeDuration: 1
+  fadeDuration: 3
   audioSource: {fileID: 0}
 --- !u!1 &674954473
 GameObject:
