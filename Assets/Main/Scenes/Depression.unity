@@ -3269,7 +3269,8 @@ MonoBehaviour:
   angerTheme:
   - {fileID: 8300000, guid: c089152e5cda2e242944a23c92beea46, type: 3}
   bargainingTheme: []
-  depressionTheme: []
+  depressionTheme:
+  - {fileID: 8300000, guid: 76a3e5cdcd6bb2148a76acf7a06cb218, type: 3}
   acceptanceTheme: []
   VolumeMenu: 1
   VolumeDenial: 1
@@ -3277,7 +3278,7 @@ MonoBehaviour:
   VolumeBargaining: 1
   VolumeDepression: 1
   VolumeAcceptance: 1
-  fadeDuration: 0
+  fadeDuration: 1
   audioSource: {fileID: 0}
 --- !u!1 &674954473
 GameObject:
