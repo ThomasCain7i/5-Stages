@@ -2888,19 +2888,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4981658551769396883, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4981658551769396884, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4981658553450556283, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
       propertyPath: m_LookaheadTime
-      value: 0.311
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4981658553450556283, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
       propertyPath: m_TrackedObjectOffset.y
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4981658553500658912, guid: 3019a60767070bf4aa519ff29fba1c69, type: 3}
       propertyPath: Speed
@@ -16503,7 +16503,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -16527,7 +16527,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1830698414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.21, y: 0.4, z: -10}
+  m_LocalPosition: {x: 3.21, y: 2.4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
