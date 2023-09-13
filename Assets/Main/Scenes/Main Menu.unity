@@ -1203,7 +1203,7 @@ MonoBehaviour:
   bargainingTheme: []
   depressionTheme: []
   acceptanceTheme: []
-  VolumeMenu: 1
+  VolumeMenu: 0.25
   VolumeDenial: 1
   VolumeAnger: 1
   VolumeBargaining: 1
