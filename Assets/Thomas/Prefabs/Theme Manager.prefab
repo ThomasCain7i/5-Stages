@@ -63,12 +63,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 76a3e5cdcd6bb2148a76acf7a06cb218, type: 3}
   acceptanceTheme:
   - {fileID: 8300000, guid: 885300da620d21d47834a8021c343414, type: 3}
-  VolumeMenu: 1
-  VolumeDenial: 1
-  VolumeAnger: 1
-  VolumeBargaining: 1
-  VolumeDepression: 1
-  VolumeAcceptance: 1
+  VolumeMenu: 0.25
+  VolumeDenial: 0.25
+  VolumeAnger: 0.25
+  VolumeBargaining: 0.25
+  VolumeDepression: 0.25
+  VolumeAcceptance: 0.25
   fadeDuration: 3
   audioSource: {fileID: 0}
 --- !u!82 &2737756856466169208
